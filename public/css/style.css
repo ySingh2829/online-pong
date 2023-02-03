@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 650px;
+    width: 1000px;
+    background-image: linear-gradient(
+            to top, #ffda77, #ffa45b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_create {
+    position: fixed;
+    top: 2vh;
+    left: calc(40% + 10px);
+}
+
+#btn_join {
+    position: fixed;
+    top: 2vh;
+    left: calc(50% + 30px);
+}
+
+.board {
+    height: 550px;
+    width: 890px;
+    background-color: #000;
+    border-radius: 14px;
+    position: relative;
+}
+
+.ball {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    top: calc(595px / 2);
+    left: calc(940px / 2);
+}
+
+.ball_effect {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    animation: spinBall 0.1s linear infinite;
+    box-shadow: inset 0 0 18px #fff, 
+        inset 6px 0 18px green, 
+        inset -6px 0 18px #022aff, 
+        inset 6px 0 30px green, 
+        inset -6px 0 30px #022aff, 
+        0 0 18px #fff, -4px 0 18px 
+        green, 4px 0 18px #022aff;
+}
+
+@keyframes spinBall {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.paddle {
+    height: 100px;
+    width: 15px;
+    border-radius: 10px;
+    position: fixed;
+}
+
+.paddle_1 {
+    top: 80px;
+    left: 100px;
+    background-color: green;
+    /*box-shadow: inset 0 0 18px #fff, 
+        inset -6px 0 18px #f3bad6, 
+        inset 6px 0 18px #0ff, 
+        inset -6px 0 30px #f3bad6, 
+        inset 6px 0 30px #0ff, 
+        0 0 18px #fff, 4px 0 18px 
+        #f3bad6, -4px 0 18px #0ff;*/
+}
+
+
+.paddle_2 {
+    top: 460px;
+    left: 880px;
+    background-color: green;
+    /*box-shadow: inset 0 0 18px #fff, 
+        inset -6px 0 18px #f3bad6, 
+        inset 6px 0 18px #0ff, 
+        inset -6px 0 30px #f3bad6, 
+        inset 6px 0 30px #0ff, 
+        0 0 18px #fff, 4px 0 18px 
+        #f3bad6, -4px 0 18px #0ff;*/
+}
+
+.player_1_score {
+    height: 50px;
+    width: 50px;
+    color: chartreuse;
+    position: fixed;
+    left: 260px;
+    margin-top: 30px;
+}
+  
+.player_2_score {
+    height: 50px;
+    width: 50px;
+    color: chartreuse;
+    position: fixed;
+    left: 680px;
+    margin-top: 30px;
+}
+
+.message {
+    position: static;
+    /* color: #48426d; */
+    text-align: center;
+    height: 10px;
+    width: 30vw;
+    color: #c9cbff;
+    left: 300px;
+    top: 110px;
+    margin: 30px auto auto auto;
+}
